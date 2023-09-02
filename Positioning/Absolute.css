@@ -1,0 +1,20 @@
+
+Elements with this position act as if they're removed from the document (normal flow of the page), the other elements will exist as if the absolute-positioned element does not exist anymore.
+
+
+
+Now you can use the top/bottom/right/left/z-index properties on this item. Without it, it'll stay in its older position, just detached from the document, so the elements after it, might stack on top of it. 
+
+The above-mentioned properties work depending on the parent(s), i.e., if the immediate parent doesn't have something other than "static", then it looks for the parent's parent and so on till it reaches the <html> tag. 
+
+If no such element is found in the journey then our properties are applied with respect to the entire body, so applying "top:0; right:0" will put it on the top right corner of the page. 
+
+But, if its parent had a position: "anything-except-static", it would've stuck at the top-right corner of its parent.
+
+
+
+Extra: If an element is positioned w.r.t the body, you can do "top:-50px,right:-50px" in it to push some of it outside the webpage, and then do "overflow-x: hidden" in the body, to remove the horizontal scrolling.
+
+
+
+PS: Using "top & bottom together" or using "right & left together" is redundant, as you can't keep an object at the top and bottom of the page at the same time. So in this case it'll just take the proper which was first applied.
