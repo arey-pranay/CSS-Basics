@@ -1,3 +1,18 @@
+CSS Positioning
+
+(tried keeping it as simple as possible)
+
+
+
+Suppose you have a
+
+<div class= "container"> <div class = "child"> </div> </div>
+
+
+
+1. Absolute:
+
+
 
 Elements with this position act as if they're removed from the document (normal flow of the page), the other elements will exist as if the absolute-positioned element does not exist anymore.
 
@@ -18,3 +33,11 @@ Extra: If an element is positioned w.r.t the body, you can do "top:-50px,right:-
 
 
 PS: Using "top & bottom together" or using "right & left together" is redundant, as you can't keep an object at the top and bottom of the page at the same time. So in this case it'll just take the proper which was first applied.
+
+
+
+PPS (idek if it's a term): The elements that you position absolute, will stack over your other elements, so you might often have to put a z-index:-1 on your absolute element to put it behind.
+
+
+
+I just realized it might be getting too long for LinkedIn, so if you felt this was useful, and wanna read more, then you can simply check this out: https://github.com/arey-pranay/CSS-Basics/edit/main/Positioning
